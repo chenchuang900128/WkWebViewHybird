@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W99-4D-4I5">
+                                <rect key="frame" x="147" y="286" width="116" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VLx-Pl-AjS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="登录名" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-le-AW1">
+                                <rect key="frame" x="32" y="95" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="Qxk-J6-yhu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="密码" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-vE-UEU">
+                                <rect key="frame" x="29" y="167" width="313" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4T4-le-AW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3lL-Pi-Kb9"/>
+                            <constraint firstItem="4T4-le-AW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5e5-yI-vwQ"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="CH3-1V-b3I"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="width" secondItem="4T4-le-AW1" secondAttribute="width" id="Erz-X2-xpg"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="top" secondItem="4T4-le-AW1" secondAttribute="bottom" constant="42" id="HDV-w3-9Nd"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Px0-kZ-YOT"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T27-1K-5p9"/>
+                            <constraint firstItem="YE0-vE-UEU" firstAttribute="height" secondItem="4T4-le-AW1" secondAttribute="height" id="ZUd-Fg-LR2"/>
+                            <constraint firstItem="4T4-le-AW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Zga-QQ-Blj"/>
+                            <constraint firstItem="4T4-le-AW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="ldQ-Sf-TnF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4T4-le-AW1" secondAttribute="trailing" constant="24" id="wMl-yl-MV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

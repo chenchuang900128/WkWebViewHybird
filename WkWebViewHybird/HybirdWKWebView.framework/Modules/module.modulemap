@@ -1,0 +1,6 @@
+framework module HybirdWKWebView {
+  umbrella header "HybirdWKWebView.h"
+
+  export *
+  module * { export * }
+}
