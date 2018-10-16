@@ -7,12 +7,15 @@
 //
 
 #import "HybirdWebViewController.h"
+#import "FBKVOController.h"
 #import <HybirdWKWebView/MBSHybirdWkWebView.h>
 
-
 @interface HybirdWebViewController ()<WKUIDelegate,WKNavigationDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *CloseBtn;
 
+@property (nonatomic,strong)UIProgressView *progressView;
+@property (nonatomic,strong)FBKVOController *KVOController;
 @end
 
 @implementation HybirdWebViewController
@@ -21,7 +24,7 @@
     [super viewDidLoad];
     
     CGFloat statusH =  CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
-    
+   // CGFloat navigationBarHeight = 44.f;
     
     MBSHybirdWkWebView *currentWebView = [MBSHybirdWkWebView hybirdWkWebViewWithFrame:CGRectMake(0, statusH, self.view.frame.size.width, [UIScreen mainScreen].bounds.size.height - statusH) andUrlStr:@"http://news.baidu.com"];
     currentWebView.navigationDelegate = self;
@@ -29,6 +32,44 @@
     //打开左划回退功能
     currentWebView.allowsBackForwardNavigationGestures=YES;
     [self.view addSubview:currentWebView];
+    
+    
+    //  进度条
+    self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
+    self.progressView.frame = CGRectMake(0, statusH, self.view.frame.size.width, 8);
+    // safari 进度条颜色
+    self.progressView.progressTintColor = [UIColor colorWithRed:22.f / 255.f green:126.f / 255.f blue:251.f / 255.f alpha:1.0];
+    self.progressView.trackTintColor = [UIColor whiteColor];
+    self.progressView.progress = 0;
+    [self.view addSubview:self.progressView];
+    
+    // FaceBook KVO框架
+    self.KVOController = [FBKVOController controllerWithObserver:self];
+    
+    // observe clock date property
+    [self.KVOController observe:currentWebView keyPath:@"estimatedProgress" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
+        
+        [self.progressView setAlpha:1.0f];
+        
+        BOOL animated = currentWebView.estimatedProgress > self.progressView.progress;
+        [self.progressView setProgress:currentWebView.estimatedProgress
+                              animated:animated];
+        
+        if (currentWebView.estimatedProgress >= 1.0f) {
+            
+            [UIView animateWithDuration:0.25f
+                                  delay:0.1f
+                                options:UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                                 [self.progressView setAlpha:0.0f];
+                             }
+                             completion:^(BOOL finished) {
+                                 [self.progressView setProgress:0.0f animated:NO];
+                             }];
+        }
+    }];
+    
+    
     
     
     [self.view bringSubviewToFront:self.CloseBtn];

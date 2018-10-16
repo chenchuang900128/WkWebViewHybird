@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HybirdWKWebView/MBSHybirdWkWebView.h>
 
 //! Project version number for HybirdWKWebView.
 FOUNDATION_EXPORT double HybirdWKWebViewVersionNumber;

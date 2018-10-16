@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0470D0B921763A1F00FD79C1 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0470D0B521763A1F00FD79C1 /* NSObject+FBKVOController.m */; };
+		0470D0BA21763A1F00FD79C1 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0470D0B621763A1F00FD79C1 /* FBKVOController.m */; };
 		EABCEE6220CA0C810081DE05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EABCEE6120CA0C810081DE05 /* AppDelegate.m */; };
 		EABCEE6520CA0C810081DE05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABCEE6420CA0C810081DE05 /* ViewController.m */; };
 		EABCEE6820CA0C810081DE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCEE6620CA0C810081DE05 /* Main.storyboard */; };
@@ -48,6 +50,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0470D0B321763A1F00FD79C1 /* KVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
+		0470D0B421763A1F00FD79C1 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		0470D0B521763A1F00FD79C1 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		0470D0B621763A1F00FD79C1 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		0470D0B821763A1F00FD79C1 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 		EABCEE5D20CA0C810081DE05 /* WkWebViewHybird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WkWebViewHybird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCEE6020CA0C810081DE05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EABCEE6120CA0C810081DE05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +98,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0470D0B221763A1F00FD79C1 /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				0470D0B321763A1F00FD79C1 /* KVOController.h */,
+				0470D0B421763A1F00FD79C1 /* FBKVOController.h */,
+				0470D0B521763A1F00FD79C1 /* NSObject+FBKVOController.m */,
+				0470D0B621763A1F00FD79C1 /* FBKVOController.m */,
+				0470D0B821763A1F00FD79C1 /* NSObject+FBKVOController.h */,
+			);
+			path = FBKVOController;
+			sourceTree = "<group>";
+		};
 		EABCEE5420CA0C810081DE05 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +143,7 @@
 				EABCEE9620CA2C1A0081DE05 /* HybirdWebViewController.h */,
 				EABCEE9720CA2C1A0081DE05 /* HybirdWebViewController.m */,
 				EABCEE9820CA2C1A0081DE05 /* HybirdWebViewController.xib */,
+				0470D0B221763A1F00FD79C1 /* FBKVOController */,
 				EABCEE6620CA0C810081DE05 /* Main.storyboard */,
 				EABCEE6920CA0C820081DE05 /* Assets.xcassets */,
 				EABCEE6B20CA0C820081DE05 /* LaunchScreen.storyboard */,
@@ -253,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0470D0B921763A1F00FD79C1 /* NSObject+FBKVOController.m in Sources */,
 				EABCEE9420CA13310081DE05 /* LoginSucessViewController.m in Sources */,
+				0470D0BA21763A1F00FD79C1 /* FBKVOController.m in Sources */,
 				EABCEE6520CA0C810081DE05 /* ViewController.m in Sources */,
 				EABCEE7020CA0C820081DE05 /* main.m in Sources */,
 				EABCEE6220CA0C810081DE05 /* AppDelegate.m in Sources */,
